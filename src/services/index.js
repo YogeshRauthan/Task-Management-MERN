@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const callRegisterUserApi = async (formData) => {
   const response = await axios.post(
-    "http://task-management-mern-backend.vercel.app/api/user/register",
+    "https://task-management-mern-backend.vercel.app/api/user/register",
     formData,
     { withCredentials: true }
   );
@@ -12,7 +12,7 @@ export const callRegisterUserApi = async (formData) => {
 
 export const callLoginUserApi = async (formData) => {
   const response = await axios.post(
-    "http://task-management-mern-backend.vercel.app/api/user/login",
+    "https://task-management-mern-backend.vercel.app/api/user/login",
     formData,
     { withCredentials: true }
   );
@@ -22,7 +22,7 @@ export const callLoginUserApi = async (formData) => {
 
 export const callUserAuthApi = async () => {
   const response = await axios.post(
-    "http://task-management-mern-backend.vercel.app/api/user/auth",
+    "https://task-management-mern-backend.vercel.app/api/user/auth",
     {},
     { withCredentials: true }
   );
@@ -32,7 +32,7 @@ export const callUserAuthApi = async () => {
 
 export const callLogoutApi = async (req, res) => {
   const response = await axios.post(
-    "http://task-management-mern-backend.vercel.app/api/user/logout",
+    "https://task-management-mern-backend.vercel.app/api/user/logout",
     {},
     { withCredentials: true }
   );
@@ -42,7 +42,7 @@ export const callLogoutApi = async (req, res) => {
 
 export const addNewTaskApi = async (formdata) => {
   const response = await axios.post(
-    "http://task-management-mern-backend.vercel.app/api/task/add-new-task",
+    "https://task-management-mern-backend.vercel.app/api/task/add-new-task",
     formdata
   );
 
@@ -51,7 +51,7 @@ export const addNewTaskApi = async (formdata) => {
 
 export const getAllTaskApi = async (getCurrentUserid) => {
   const response = await axios.get(
-    `http://task-management-mern-backend.vercel.app/api/task/get-all-tasks-by-userid/${getCurrentUserid}`
+    `https://task-management-mern-backend.vercel.app/api/task/get-all-tasks-by-userid/${getCurrentUserid}`
   );
 
   return response?.data;
@@ -59,7 +59,7 @@ export const getAllTaskApi = async (getCurrentUserid) => {
 
 export const updateTaskApi = async (formdata) => {
   const response = await axios.put(
-    `http://task-management-mern-backend.vercel.app/api/task/update-task`,
+    `https://task-management-mern-backend.vercel.app/api/task/update-task`,
     formdata
   );
 
@@ -68,7 +68,7 @@ export const updateTaskApi = async (formdata) => {
 
 export const deleteTaskApi = async (getCurrentTaskid) => {
   const response = await axios.delete(
-    `http://task-management-mern-backend.vercel.app/api/task/delete-task/${getCurrentTaskid}`
+    `https://task-management-mern-backend.vercel.app/api/task/delete-task/${getCurrentTaskid}`
   );
 
   return response?.data;
